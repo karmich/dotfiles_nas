@@ -1,0 +1,152 @@
+// =============================================================================
+//
+// Waybar configuration
+//
+// Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+//
+// =============================================================================
+
+{
+    // -------------------------------------------------------------------------
+    // Global configuration
+    // -------------------------------------------------------------------------
+
+    "layer": "top",
+
+    "position": "top",
+
+    // If height property would be not present, it'd be calculated dynamically
+     "height": 28,
+
+    "modules-left": [
+        "sway/workspaces",
+	//"sway/window",
+        "sway/mode"
+    ],
+    "modules-center": [
+        "sway/window"
+        //"clock#date",
+        //"clock#time"
+    ],
+    "modules-right": [
+        "tray",
+        "cpu",
+        "memory",
+        "pulseaudio",
+        //"network",
+        //"temperature",
+        //"custom/keyboard-layout",
+        "sway/language",
+        "clock#date",
+        "clock#time"
+    ],
+
+
+    // -------------------------------------------------------------------------
+    // Modules
+    // -------------------------------------------------------------------------
+
+    "sway/language": {
+        "format": "{flag}"
+    },
+
+    "clock#time": {
+        "interval": 10,
+        "format": "{:%H:%M}",
+        "tooltip": false
+    },
+
+    "clock#date": {
+      "interval": 10,
+      //"format": " {:%e %b %Y}", // Icon: calendar-alt
+      "format": "{:%e %b %Y}",
+      "tooltip-format": "{:%e %B %Y}"
+    },
+
+    "cpu": {
+        "interval": 5,
+        //"format": " {usage}% ({load})",
+        "format": "CPU: {usage}% ({load})",
+        "states": {
+          "warning": 70,
+          "critical": 90
+        }
+    },
+
+    "memory": {
+        "interval": 5,
+        //"format": " {}%",
+        "format": "RAM: {}%",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+
+    "network": {
+        "interval": 5,
+        "format-wifi": "  {essid} ({signalStrength}%)", // Icon: wifi
+        "format-ethernet": " {ifname}:{ipaddr}/{cidr}", // Icon: ethernet
+        "format-disconnected": "⚠  Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}"
+    },
+
+    "sway/mode": {
+        "format": "<span style=\"italic\"> {}</span>", // Icon: expand-arrows-alt
+        "tooltip": false
+    },
+
+    "sway/window": {
+        "format": " {} ",
+        "max-length": 60
+    },
+
+    "sway/workspaces": {
+        "all-outputs": false,
+        "disable-scroll": true,
+        "format": "{name}",
+        "format-icons": {
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+
+    "pulseaudio": {
+        "scroll-step": 5,
+        //"format": "{icon} {volume}%",
+        "format": "VOL: {volume}%",
+        //"format-bluetooth": "{icon} {volume}% ",
+        "format-bluetooth": "VOL: {volume}% ",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "temperature": {
+      "critical-threshold": 80,
+      "interval": 5,
+      "format": "{icon}{temperatureC}°C",
+      "format-icons": [
+          "", // Icon: temperature-empty
+          "", // Icon: temperature-quarter
+          "", // Icon: temperature-half
+          "", // Icon: temperature-three-quarters
+          ""  // Icon: temperature-full
+      ],
+      "tooltip": true
+    },
+
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    }
+}
