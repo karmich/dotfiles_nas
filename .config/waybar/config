@@ -16,7 +16,7 @@
     "position": "top",
 
     // If height property would be not present, it'd be calculated dynamically
-     "height": 28,
+     "height": 30,
 
     "modules-left": [
         "sway/workspaces",
@@ -65,8 +65,8 @@
 
     "cpu": {
         "interval": 5,
-        //"format": " {usage}% ({load})",
-        "format": "CPU: {usage}% ({load})",
+        "format": " {usage}% ({load})",
+        //"format": "CPU: {usage}% ({load})",
         "states": {
           "warning": 70,
           "critical": 90
@@ -75,8 +75,8 @@
 
     "memory": {
         "interval": 5,
-        //"format": " {}%",
-        "format": "RAM: {}%",
+        "format": " {}%",
+        //"format": "RAM: {}%",
         "states": {
             "warning": 70,
             "critical": 90
@@ -114,8 +114,8 @@
 
     "pulseaudio": {
         "scroll-step": 5,
-        //"format": "{icon} {volume}%",
-        "format": "VOL: {volume}%",
+        "format": "{icon} {volume}%",
+        //"format": "VOL: {volume}%",
         //"format-bluetooth": "{icon} {volume}% ",
         "format-bluetooth": "VOL: {volume}% ",
         "format-muted": "",
@@ -126,7 +126,7 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", ""]
+            "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
     },
