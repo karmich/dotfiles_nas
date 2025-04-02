@@ -1,7 +1,7 @@
 window {
 	margin: 0px;
-	border: 1px solid #555;
-	background-color: #282a36;
+	border: 1px solid #333;
+	background-color: #555;
 	font-family: 'Noto Sans Mono';
 	font-size: 15px;
 }
@@ -9,20 +9,21 @@ window {
 #input {
 	margin: 5px;
 	border: none;
-	color: #f8f8f2;
-	background-color: #44475a;
+	color: #fff;
+	background-color: #333;
+	border-radius: 0;
 }
 
 #inner-box {
 	margin: 5px;
 	border: none;
-	background-color: #282a36;
+	background-color: #333;
 }
 
 #outer-box {
 	margin: 5px;
 	border: none;
-	background-color: #282a36;
+	background-color: #444;
 }
 
 #scroll {
@@ -45,7 +46,7 @@ window {
 }
 
 #entry:selected {
-	background-color: #44475a;
+	background-color: #285577;
 }
 
 #entry:selected #text {
