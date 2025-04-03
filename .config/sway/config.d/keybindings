@@ -44,8 +44,8 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # Custom
-bindsym $mod+f12 exec pamixer -i 5
-bindsym $mod+f11 exec pamixer -d 5
+bindsym $mod+f12 exec '/home/kma/bin/volume.sh up'
+bindsym $mod+f11 exec '/home/kma/bin/volume.sh down'
 bindsym Print exec "grimshot --notify copy area"
 bindsym Shift+Print exec "grimshot --notify save area"
 

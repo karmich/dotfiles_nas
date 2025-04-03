@@ -14,8 +14,10 @@
 input type:keyboard {
     xkb_layout us,ru
     xkb_options grp:caps_toggle,grp_led:scroll
+    xkb_numlock enabled
 }
+
 input "2522:37008:A4TECH_USB_Device"  {
-	accel_profile "flat"
-	pointer_accel 0.4
+    accel_profile "flat"
+    pointer_accel 0.4
 }
