@@ -1,54 +1,54 @@
 window {
 	margin: 0px;
-	border: 1px solid #333;
+	#border: 1px solid #333;
 	background-color: #555;
 	font-family: 'Noto Sans Mono';
 	font-size: 15px;
 }
 
 #input {
-	margin: 5px;
+	#margin: 5px;
 	border: none;
-	color: #fff;
+        color: #fff;
 	background-color: #333;
 	border-radius: 0;
 }
 
 #inner-box {
-	margin: 5px;
-	border: none;
-	background-color: #333;
+	#margin: 5px;
+	#border: none;
+	#background-color: #333;
 }
 
 #outer-box {
-	margin: 5px;
-	border: none;
-	background-color: #444;
+	#margin: 5px;
+	#border: none;
+	#background-color: #444;
 }
 
 #scroll {
-	margin: 0px;
-	border: none;
+	#margin: 0px;
+	#border: none;
 }
 
 #text {
-	margin: 5px;
-	border: none;
-	color: #f8f8f2;
+	margin-left: 10px;
+	#border: none;
+	color: #fff;
 } 
 
 #entry.activatable #text {
-	color: #282a36;
+	#color: #282a36;
 }
 
 #entry > * {
-	color: #f8f8f2;
+	#color: #f8f8f2;
 }
 
 #entry:selected {
-	background-color: #285577;
+	#background-color: #285577;
 }
 
 #entry:selected #text {
-	font-weight: bold;
+	#font-weight: bold;
 }

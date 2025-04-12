@@ -1,0 +1,8 @@
+sort_order=alphabetical
+allow_images=true
+no_actions=true
+image_size=24
+lines=8
+layer=overlay
+prompt=Search
+width=400
